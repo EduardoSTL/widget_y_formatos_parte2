@@ -14,6 +14,7 @@ class MenuItem{
   });
 }
 
+//* opciones de la vista home:
 const appMenuItems = <MenuItem>[
 
   MenuItem(
