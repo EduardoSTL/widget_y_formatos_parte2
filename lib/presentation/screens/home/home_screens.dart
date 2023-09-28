@@ -51,7 +51,12 @@ final MenuItem menuItem;
       trailing: Icon(Icons.arrow_forward_ios_rounded, color: colors.primary),
       title: Text(menuItem.subTitle),
       onTap: () {
-        //Navigator.of(context).push();
+        /* Navigator.of(context).push(
+          MaterialPageRoute(
+            builder: (context) => const ButtonsScreen(),
+          ),
+        );
+        context.pushNamed(CardsScreen.name); */
         //context.push(menuItem.link);
       },
     );
