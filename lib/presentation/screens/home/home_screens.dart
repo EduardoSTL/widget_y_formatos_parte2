@@ -45,7 +45,9 @@ final MenuItem menuItem;
     final colors = Theme.of(context).colorScheme;
 
     return ListTile(
+      //* leading: ordena al inicio
       leading: Icon(menuItem.icon, color: colors.primary),
+      //* trailing ordena al final
       trailing: Icon(Icons.arrow_forward_ios_rounded, color: colors.primary),
       title: Text(menuItem.subTitle),
       onTap: () {

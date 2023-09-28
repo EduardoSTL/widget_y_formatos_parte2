@@ -15,6 +15,7 @@ class MenuItem{
 }
 
 //* opciones de la vista home:
+//* lista de menus:
 const appMenuItems = <MenuItem>[
 
   MenuItem(
