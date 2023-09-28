@@ -16,8 +16,12 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: const Text('Material App Bar'),
         ),
-        body: const Center(
-          child: Text('Hello World'),
+        body: Center(
+          //* cajita de relleno:
+          child: FilledButton(
+            child: Text('limones'),
+            onPressed: (){},
+            ),
         ),
       ),
     );
