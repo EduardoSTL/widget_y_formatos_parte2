@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:widget_y_formatos/config/theme/app_theme.dart';
+import 'package:widget_y_formatos/presentation/screens/home/home_screens.dart';
 
 void main() => runApp(const MyApp());
 
@@ -11,18 +12,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp( 
       debugShowCheckedModeBanner: false,
       //obtener un theme a partir del metodo getTheme
-      theme: AppTheme(selectedColor: 4).getTheme(),
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Material App Bar'),
-        ),
-        body: Center(
-          //* cajita de relleno:
-          child: FilledButton(
-            child: Text('limones'),
-            onPressed: (){},
-            ),
-        ),
+      theme: AppTheme(selectedColor: 6).getTheme(),
+      //definimos home screen como pantalla de inicio o menu que nos llevara a las demas vistas de la app
+      home: const HomeScreen(
+
       ),
     );
   }
