@@ -15,8 +15,8 @@ class MyApp extends StatelessWidget {
       //obtener un theme a partir del metodo getTheme
       theme: AppTheme(selectedColor: 6).getTheme(),
       //definimos home screen como pantalla de inicio o menu que nos llevara a las demas vistas de la app
-      home: const ButtonsScreen(
-
+      home: const HomeScreen(
+        
       ),
     );
   }

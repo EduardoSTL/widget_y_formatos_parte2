@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:widget_y_formatos/config/menu/menu_items.dart';
+import 'package:widget_y_formatos/presentation/screens/buttons/buttons_screen.dart';
 
 class HomeScreen extends StatelessWidget {
 
@@ -51,11 +52,11 @@ final MenuItem menuItem;
       trailing: Icon(Icons.arrow_forward_ios_rounded, color: colors.primary),
       title: Text(menuItem.subTitle),
       onTap: () {
-        /* Navigator.of(context).push(
+        Navigator.of(context).push(
           MaterialPageRoute(
             builder: (context) => const ButtonsScreen(),
           ),
-        );*/
+        );
         Navigator.pushNamed(context, menuItem.link);
         // context.pushNamed(CardsScreen.name); 
         // context.push(menuItem.link);
