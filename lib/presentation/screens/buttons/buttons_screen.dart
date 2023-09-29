@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+//* clase para vista de los botones
 class ButtonsScreen extends StatelessWidget {
 
   static const String name = 'buttons_screen';
@@ -16,7 +17,7 @@ class ButtonsScreen extends StatelessWidget {
       floatingActionButton: FloatingActionButton(
         child: const Icon(Icons.arrow_back_ios_new_rounded),
         onPressed: (){
-          context.pop();
+          Navigator.pop(context);
         },
       ),
     );
@@ -30,6 +31,7 @@ class _ButtonsView extends StatelessWidget {
   Widget build(BuildContext context) {
     final colors = Theme.of(context).colorScheme;
 
+    // wdiget que contiene una caja vacia, puede contener elementos visuales imagenes, botones, etc
     return SizedBox(
       width: double.infinity,
       child: Padding(
@@ -38,11 +40,12 @@ class _ButtonsView extends StatelessWidget {
           spacing: 10,
           alignment: WrapAlignment.center,
           children: [
+            //-----------boton presionado y cuando no esta presionado:--------------
             ElevatedButton(
             onPressed: (){},
             child: const Text('Elevated')),
-
             const ElevatedButton(onPressed: null, child: Text('Elevated Disabled')),
+            // ---------------------------------------------------------------------
 
             ElevatedButton.icon(
               onPressed: (){}, 

@@ -55,9 +55,10 @@ final MenuItem menuItem;
           MaterialPageRoute(
             builder: (context) => const ButtonsScreen(),
           ),
-        );
-        context.pushNamed(CardsScreen.name); */
-        //context.push(menuItem.link);
+        );*/
+        Navigator.pushNamed(context, menuItem.link);
+        // context.pushNamed(CardsScreen.name); 
+        // context.push(menuItem.link);
       },
     );
   }
