@@ -1,5 +1,5 @@
 import 'package:go_router/go_router.dart';
-import 'package:widget_y_formatos/presentation/cards/cards_screen.dart';
+import 'package:widget_y_formatos/presentation/screens/cards/cards_screen.dart';
 import 'package:widget_y_formatos/presentation/screens/buttons/buttons_screen.dart';
 import 'package:widget_y_formatos/presentation/screens/home/home_screens.dart';
 
