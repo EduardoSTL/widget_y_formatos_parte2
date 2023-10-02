@@ -3,7 +3,7 @@ import 'package:widget_y_formatos/presentation/screens/cards/cards_screen.dart';
 import 'package:widget_y_formatos/presentation/screens/buttons/buttons_screen.dart';
 import 'package:widget_y_formatos/presentation/screens/home/home_screen.dart';
 
-//* Go router config
+//* GoRouter config
 final appRouter = GoRouter(
   initialLocation: '/',
   routes: [
