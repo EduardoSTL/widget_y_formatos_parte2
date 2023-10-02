@@ -33,6 +33,8 @@ class _CardsView extends StatelessWidget {
     return SingleChildScrollView(
       child: Column(
         children: [
+          //! SPREAD OPERATOR 
+          //los 3 puntos indican que pueden haber más cards, o elemeentos de otro tipo
           ...cards.map(
             (card) => _CardType1(elevation: card['elevation'], label: card['label']),
             ),
