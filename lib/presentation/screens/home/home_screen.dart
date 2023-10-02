@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:widget_y_formatos/config/menu/menu_items.dart';
 import 'package:widget_y_formatos/presentation/screens/buttons/buttons_screen.dart';
+import 'package:widget_y_formatos/presentation/screens/cards/cards_screen.dart';
+//import 'package:widget_y_formatos/presentation/screens/cards/cards_screen.dart;
 
 class HomeScreen extends StatelessWidget {
 
@@ -58,8 +61,8 @@ final MenuItem menuItem;
           ),
         );
         Navigator.pushNamed(context, menuItem.link);
-        // context.pushNamed(CardsScreen.name); 
-        // context.push(menuItem.link);
+        context.pushNamed(CardsScreen.name); 
+        context.push(menuItem.link);
       },
     );
   }
