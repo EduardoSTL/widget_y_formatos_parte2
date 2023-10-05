@@ -29,66 +29,57 @@ class _ButtonsView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    
     final colors = Theme.of(context).colorScheme;
-
-    // wdiget que contiene una caja vacia, puede contener elementos visuales imagenes, botones, etc
+    //* sized box es una caja con un tamaño definido para meterle cosas, usualmente son imagenes pero pueden ser otras cosas
     return SizedBox(
       width: double.infinity,
       child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 20),
+        padding: const EdgeInsets.symmetric(horizontal:10,vertical:20),
         child: Wrap(
           spacing: 10,
           alignment: WrapAlignment.center,
           children: [
-            //-----------boton presionado y cuando no esta presionado:--------------
-            ElevatedButton(
-            onPressed: (){},
-            child: const Text('Elevated')),
+            //https://api.flutter.dev/flutter/material/ElevatedButton-class.html
+            //* es para resaltar el boton activado y desactivado.
+            ElevatedButton(onPressed: (){}, child: const Text ('Elevated')),
             const ElevatedButton(onPressed: null, child: Text('Elevated Disabled')),
-            // ---------------------------------------------------------------------
 
             ElevatedButton.icon(
-              onPressed: (){}, 
-              icon: const Icon(Icons.access_alarm_rounded), 
-              label: const Text('Elevated Icon'),
+              onPressed: (){},
+              icon: const Icon(Icons.access_alarm_rounded),
+              label: const Text('Elevated Icon')
               ),
 
-            FilledButton(onPressed: (){}, child: const Text('filled')),
-            FilledButton.icon(
-              onPressed: (){}, 
-              icon: const Icon(Icons.accessibility_new),
-              label: const Text('Filled Icon'),
-              ),
-            
-            OutlinedButton(onPressed: (){}, child: const Text('Outlined')),
+            FilledButton(onPressed: (){}, child: const Text('Filled')),
+            FilledButton.icon(onPressed: (){}, icon: const Icon(Icons.accessibility_new), label: const Text('Filled Icon'),
+            ),
+
+            OutlinedButton(onPressed: (){}, child: const Text('Outline')),
             OutlinedButton.icon(
-              onPressed: (){}, 
-              label: const Text('Outlined Icon'), 
-              icon: const Icon(Icons.terminal),
-              ),
+              onPressed: (){},
+              icon: Icon(Icons.terminal),
+              label: const Text('Outline Icon')),
 
             TextButton(onPressed: (){}, child: const Text('Text')),
             TextButton.icon(
-              onPressed: (){}, 
-              icon: const Icon(Icons.account_box_outlined), 
-              label: const Text('Text Icon'),
-              ),
-              
-            const CustomButton(),
+              onPressed: (){},
+              icon: const Icon(Icons.account_box_outlined),
+              label: const Text('Text Icon')),
 
-            IconButton(onPressed: (){}, icon: const Icon(Icons.app_registration_rounded)),
-            IconButton(
-              onPressed: (){}, 
-              icon: const Icon(Icons.app_registration_rounded),
-              style: ButtonStyle(
-                backgroundColor: MaterialStatePropertyAll(colors.primary),
-                iconColor: const MaterialStatePropertyAll(Colors.white),
-              ),
-            ),
+              const CustomButton(),
+
+              IconButton(onPressed: (){}, icon: const Icon(Icons.app_registration_rounded)),
+              IconButton(onPressed: (){}, icon: const Icon(Icons.app_registration_rounded),
+              style: ButtonStyle(backgroundColor: MaterialStatePropertyAll(colors.primary),
+              iconColor: const MaterialStatePropertyAll(Colors.white))),
+              
+
           ],
         ),
-      )
+        ),
     );
+
   }
 }
 
@@ -97,22 +88,18 @@ class CustomButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final colors = Theme.of(context).colorScheme;
-
+    final colors= Theme.of(context).colorScheme;
     return ClipRRect(
-      borderRadius: BorderRadius.circular(20),
+      borderRadius:  BorderRadius.circular(20),
       child: Material(
         color: colors.primary,
         child: InkWell(
           onTap: (){},
-          child: const Padding(
-            padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-            child: Text('Hola mundo', style: TextStyle(color: Colors.white,
-            ),
-          ),
-        ),
-      ),
-      ),
+          child: const Padding(padding: EdgeInsets.symmetric(horizontal:20,vertical:10),
+          child: Text('hola mundo',
+          style: TextStyle(color: Colors.white))
+          ))
+        )
     );
   }
 }

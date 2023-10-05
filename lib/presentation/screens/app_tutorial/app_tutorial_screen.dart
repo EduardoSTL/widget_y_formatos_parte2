@@ -2,12 +2,10 @@ import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-
 class SlideInfo {
   final String title;
   final String caption;
   final String imageUrl;
-
   SlideInfo(this.title, this.caption, this.imageUrl);
 }
 
@@ -16,9 +14,7 @@ final slides = <SlideInfo>[
   SlideInfo('Entrega rápida', 'Ullamco ullamco duis labore quis occaecat culpa laborum id incididunt.', 'assets/images/2.jpeg'),
   SlideInfo('Disfruta la comida', 'Ea officia exercitation voluptate nostrud amet esse ut exercitation deserunt est enim est.', 'assets/images/3.jpeg'),
 ];
-
-
-
+ 
 
 class AppTutorialScreen extends StatefulWidget {
 
@@ -47,19 +43,14 @@ class _AppTutorialScreenState extends State<AppTutorialScreen> {
           endReached = true;
         });
       }
-
     });
-
   }
 
   @override
   void dispose() {
     pageviewController.dispose();
-
     super.dispose();
   }
-
-
 
   @override
   Widget build(BuildContext context) {
@@ -67,7 +58,6 @@ class _AppTutorialScreenState extends State<AppTutorialScreen> {
       backgroundColor: Colors.white,
       body: Stack(
         children: [
-
           PageView(
             controller: pageviewController,
             physics: const BouncingScrollPhysics(),
@@ -102,10 +92,8 @@ class _AppTutorialScreenState extends State<AppTutorialScreen> {
                 ),
               )
             ): const SizedBox(),
-
         ],
       ),
-
     );
   }
 }
@@ -141,7 +129,6 @@ class _Slide extends StatelessWidget {
             Text( title, style: titleStyle, ),
             const SizedBox(height: 10 ),
             Text( caption, style: captionStyle, ),
-
           ],
         ),
       ),
