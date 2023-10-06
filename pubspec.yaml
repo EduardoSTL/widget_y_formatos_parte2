@@ -18,6 +18,7 @@ dependencies:
   animate_do: ^3.1.2
   flutter_lints: ^2.0.3
   riverpod: ^2.4.1
+  flutter_riverpod: ^2.4.3
 
 dev_dependencies:
   flutter_test:
