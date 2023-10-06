@@ -11,8 +11,7 @@ class ThemeChargerScreen extends ConsumerWidget {
   @override
   Widget build(BuildContext context, ref) {
 
-    final isDarkmode = ref.watch (themeNotifierProvider).isDarkmode;
-
+    final isDarkmode = ref.watch(themeNotifierProvider).isDarkmode;
 
     return Scaffold(
       appBar: AppBar(
@@ -23,7 +22,7 @@ class ThemeChargerScreen extends ConsumerWidget {
             //ref.read(isDarkmodeProvider.notifier)
             //.update((state)=> !state);
             ref.read(themeNotifierProvider.notifier)
-            .toggleDarkMode;
+            .toggleDarkMode();
           },)
         ],
       ),
@@ -41,8 +40,6 @@ class _ThemeChargerView extends ConsumerWidget {
     final List<Color> colors= ref.watch(colorListProvider);
     final int selectedColor = ref.watch(themeNotifierProvider).selectedColor;
     //final int selectedColor = ref.watch(selectedColorProvider);
-
-
 
     return ListView.builder(
       itemCount: colors.length,
