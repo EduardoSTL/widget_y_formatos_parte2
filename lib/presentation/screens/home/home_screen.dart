@@ -3,21 +3,23 @@ import 'package:go_router/go_router.dart';
 import 'package:widget_y_formatos/config/menu/menu_items.dart';
 import 'package:widget_y_formatos/presentation/screens/buttons/buttons_screen.dart';
 import 'package:widget_y_formatos/presentation/screens/cards/cards_screen.dart';
-//import 'package:widget_y_formatos/presentation/screens/cards/cards_screen.dart;
+import 'package:widget_y_formatos/presentation/widgets/side_menu.dart';
 
 class HomeScreen extends StatelessWidget {
 
   static const String name = 'home_screen';
-
   const HomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final scaffoldKey = GlobalKey<ScaffoldState>();
     return Scaffold(
+      key: scaffoldKey,
       appBar: AppBar(
-        title: const Text('Flutter + Material 3'),
-      ),
+        title: const Text('Flutter + Material 3')
+        ),
       body: const _HomeView(),
+      drawer: SideMenu(scaffoldKey:  scaffoldKey,),
     );
   }
 }

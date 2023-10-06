@@ -7,3 +7,4 @@ export 'package:widget_y_formatos/presentation/screens/infinite_scroll/infinite_
 export 'package:widget_y_formatos/presentation/screens/progress/progress_screen.dart';
 export 'package:widget_y_formatos/presentation/screens/snackbar/snackbar_screen.dart';
 export 'package:widget_y_formatos/presentation/screens/ui_controls/ui_controls_screen.dart';
+export 'package:widget_y_formatos/presentation/screens/counter/counter_screen.dart';
